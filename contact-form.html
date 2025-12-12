@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - 联系表单</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header id="mainHeader" class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">Lyq</a>
+                <nav id="mainNav" class="main-nav">
+                    <ul>
+                        <li><a href="index.html#hero">首页</a></li>
+                        <li><a href="index.html#about">关于</a></li>
+                        <li><a href="index.html#blog">博客</a></li>
+                        <li><a href="index.html#portfolio">作品集</a></li>
+                    </ul>
+                </nav>
+                <div id="hamburger" class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <section class="content-page section fade-in-section">
+                <div class="container">
+                    <h2 class="section-title">Contact Form - 联系表单</h2>
+                    <div class="contact-form-detail">
+                        <p>这是我的联系表单，您可以通过它与我取得联系。</p>
+                        <p>无论您有项目合作、技术咨询还是其他问题，都可以通过这个表单给我留言。</p>
+                        <p>我会尽快回复您的消息，感谢您的关注和支持！</p>
+                        
+                        <h3>表单字段说明：</h3>
+                        <ul>
+                            <li><strong>姓名</strong>：您的姓名，方便我称呼您</li>
+                            <li><strong>邮箱</strong>：您的邮箱地址，用于我回复您的消息</li>
+                            <li><strong>留言</strong>：您要告诉我什么？可以详细描述您的问题或需求</li>
+                        </ul>
+                        
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="您的姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="您的邮箱" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="您的留言" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">发送留言</button>
+                        </form>
+                    </div>
+                    <a href="index.html#contact" class="back-button">返回联系</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="copyright-year"></span> Lyq. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

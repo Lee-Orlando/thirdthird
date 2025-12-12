@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Grid - 我的作品集</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header id="mainHeader" class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">Lyq</a>
+                <nav id="mainNav" class="main-nav">
+                    <ul>
+                        <li><a href="index.html#hero">首页</a></li>
+                        <li><a href="index.html#about">关于</a></li>
+                        <li><a href="index.html#blog">博客</a></li>
+                        <li><a href="index.html#portfolio">作品集</a></li>
+                        <li><a href="index.html#contact">联系</a></li>
+                    </ul>
+                </nav>
+                <div id="hamburger" class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <section class="content-page section fade-in-section">
+                <div class="container">
+                    <h2 class="section-title">Portfolio Grid - 我的作品集</h2>
+                    <div class="portfolio-grid-detail">
+                        <p>这是我的作品集展示区域，包含了我过去完成的一些项目和作品。</p>
+                        <p>每个项目卡片展示了一个具体的作品，包含项目名称、简短描述和技术栈。</p>
+                        <p>这些项目涵盖了前端开发、后端开发、全栈应用等多个领域，点击项目卡片可以查看更详细的信息。</p>
+                        
+                        <h3>项目概述：</h3>
+                        <ul>
+                            <li><strong>项目 Alpha</strong>：基于 React 的社交媒体分析仪表盘</li>
+                            <li><strong>项目 Beta</strong>：使用 Python 和 Django 构建的电子商务平台</li>
+                            <li><strong>项目 Gamma</strong>：一个响应式的个人博客系统</li>
+                            <li><strong>项目 Delta</strong>：基于 Node.js 的实时聊天应用程序</li>
+                            <li><strong>项目 Epsilon</strong>：使用 Vue.js 构建的任务管理应用</li>
+                            <li><strong>项目 Zeta</strong>：一个移动优先的天气预报应用</li>
+                        </ul>
+                        
+                        <p>这个区域使用了响应式网格布局，可以在不同屏幕尺寸下自动调整排列方式，提供最佳的浏览体验。</p>
+                    </div>
+                    <a href="index.html#portfolio" class="back-button">返回作品集</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="copyright-year"></span> Lyq. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

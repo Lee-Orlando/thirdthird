@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyq - 个人博客</title>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 引入Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 页面内容将直接加载，不再使用异步方式 -->
+    <div id="app">
+        <!-- 直接引入所有组件 -->
+        <header id="mainHeader" class="main-header">
+            <div class="container">
+                <a href="#" class="logo">Lyq</a>
+                <nav id="mainNav" class="main-nav">
+                    <ul>
+                        <li><a href="#hero">首页</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#blog">博客</a></li>
+                        <li><a href="#portfolio">作品集</a></li>
+                    </ul>
+                </nav>
+                <div id="hamburger" class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <!-- Hero Section -->
+            <section class="hero section" id="hero">
+                <div class="hero-background clickable-div" onclick="window.location.href='hero-background.html'"></div>
+                <div id="particles-js" class="clickable-div" onclick="window.location.href='particles-js.html'"></div>
+                <div class="hero-content">
+                    <h1>探索、创造、分享</h1>
+                    <p>欢迎来到我的数字花园，在这里我记录我的学习、思考和创造之旅。</p>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section class="about section fade-in-section" id="about">
+                <div class="container">
+                    <div class="about-image">
+                        <img src="images/avatar.svg" alt="个人头像">
+                    </div>
+                    <div class="about-content">
+                        <h2 class="section-title">关于我</h2>
+                        <p>我是一名热衷于技术和创新的开发者，不断学习和探索新的可能性。我相信技术的力量可以改变世界，让生活变得更加美好。</p>
+                        <p>在我的职业生涯中，我积累了丰富的前端和后端开发经验，能够独立完成从设计到部署的全流程开发工作。</p>
+                        <h3>我的技能</h3>
+                        <div class="skills-list">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Vue.js</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Django</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Docker</span>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Blog Section -->
+            <section class="blog section fade-in-section" id="blog">
+                <div class="container">
+                    <h2 class="section-title">最新目标</h2>
+                    <div class="blog-grid clickable-div" onclick="window.location.href='blog-grid.html'">
+                        <div class="blog-card clickable-div" onclick="event.stopPropagation(); window.location.href='blog-card-1.html'">
+                            <div class="blog-card-image" style="background-image: url('images/tech-blog.svg')"></div>
+                            <div class="blog-card-content">
+                                <h3>全栈工程师</h3>
+                                <div class="blog-meta">
+                                    <span>wait</span> / <span>Lyq</span>
+                                </div>
+                                <p>专注于构建完整的Web应用程序，包括前端和后端开发，确保无缝的用户体验和高性能的系统架构。</p>
+                            </div>
+                        </div>
+                        <div class="blog-card clickable-div" onclick="event.stopPropagation(); window.location.href='blog-card-2.html'">
+                            <div class="blog-card-image" style="background-image: url('images/design-blog.svg')"></div>
+                            <div class="blog-card-content">
+                                <h3>独立游戏开发者</h3>
+                                <div class="blog-meta">
+                                    <span>wait</span> / <span>Lyq</span>
+                                </div>
+                                <p>创建引人入胜的游戏体验，结合编程技能和创意设计，打造独特的互动娱乐产品。</p>
+                            </div>
+                        </div>
+                        <div class="blog-card clickable-div" onclick="event.stopPropagation(); window.location.href='blog-card-3.html'">
+                            <div class="blog-card-image" style="background-image: url('images/security-blog.svg')"></div>
+                            <div class="blog-card-content">
+                                <h3>网络安全专家</h3>
+                                <div class="blog-meta">
+                                    <span>wait</span> / <span>Lyq</span>
+                                </div>
+                                <p>保护系统和数据免受各种网络威胁，确保信息安全和隐私保护，构建可靠的安全防线。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Portfolio Section -->
+            <section class="portfolio section fade-in-section" id="portfolio">
+                <div class="container">
+                    <h2 class="section-title">我的作品集</h2>
+                    <div class="portfolio-grid clickable-div" onclick="window.location.href='portfolio-grid.html'">
+                        <div class="portfolio-item clickable-div" onclick="window.location.href='portfolio-item-1.html'">
+                            <img src="images/project1.svg" alt="项目 Alpha">
+                            <div class="portfolio-overlay">
+                                <h3>项目 Alpha</h3>
+                                <p>一个基于 React 的社交媒体分析仪表盘。</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item clickable-div" onclick="window.location.href='portfolio-item-2.html'">
+                            <img src="images/project2.svg" alt="项目 Beta">
+                            <div class="portfolio-overlay">
+                                <h3>项目 Beta</h3>
+                                <p>使用 Python 和 Django 构建的电子商务平台。</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item clickable-div" onclick="window.location.href='portfolio-item-3.html'">
+                            <img src="images/project3.svg" alt="项目 Gamma">
+                            <div class="portfolio-overlay">
+                                <h3>项目 Gamma</h3>
+                                <p>一个响应式的个人博客系统。</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item clickable-div" onclick="window.location.href='portfolio-item-4.html'">
+                            <img src="images/project4.svg" alt="项目 Delta">
+                            <div class="portfolio-overlay">
+                                <h3>项目 Delta</h3>
+                                <p>基于 Node.js 的实时聊天应用程序。</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item clickable-div" onclick="window.location.href='portfolio-item-5.html'">
+                            <img src="images/project5.svg" alt="项目 Epsilon">
+                            <div class="portfolio-overlay">
+                                <h3>项目 Epsilon</h3>
+                                <p>使用 Vue.js 构建的任务管理应用。</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item clickable-div" onclick="window.location.href='portfolio-item-6.html'">
+                            <img src="images/project6.svg" alt="项目 Zeta">
+                            <div class="portfolio-overlay">
+                                <h3>项目 Zeta</h3>
+                                <p>一个移动优先的天气预报应用。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+        </main>
+        
+        <!-- Footer Section -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="copyright-year"></span> Lyq. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 引入外部JavaScript文件 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
