@@ -216,16 +216,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Header scroll effect
-    const header = document.getElementById('mainHeader');
-    if (header) {
-        window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('mainHeader');
+        if (header) {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
-        });
-    }
+        }
+    });
     
     // Mobile nav
     const hamburger = document.getElementById('hamburger');
@@ -241,6 +241,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleLinkClick(event) {
         event.preventDefault();
         
+        // Get DOM elements inside the function to avoid scope issues
+        const mainNav = document.getElementById('mainNav');
+        const hamburger = document.getElementById('hamburger');
+        const header = document.getElementById('mainHeader');
+        
         // Close mobile nav if open
         if (mainNav && mainNav.classList.contains('active')) {
            if (hamburger) {
@@ -251,6 +256,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Get target section
         const targetId = this.getAttribute('href');
+        if (!targetId) return;
+        
         const targetSection = document.querySelector(targetId);
         
         // Smooth scroll to target section
@@ -277,9 +284,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Active nav link on scroll
-    const sections = document.querySelectorAll('section');
-    if (sections.length > 0 && navLinks.length > 0) {
-        window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('#mainNav a');
+        const header = document.getElementById('mainHeader');
+        
+        if (sections.length > 0 && navLinks.length > 0) {
             let current = '';
             // 使用header的实际高度来计算当前可见部分
             const headerHeight = header ? header.offsetHeight : 0;
@@ -300,29 +310,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     link.classList.add('active');
                 }
             });
-        });
-    }
+        }
+    });
     
     // Fade in sections on scroll
-    const faders = document.querySelectorAll('.fade-in-section');
-    const appearOptions = {
-        threshold: 0.2,
-        rootMargin: "0px 0px -100px 0px"
-    };
+    window.addEventListener('load', () => {
+        const faders = document.querySelectorAll('.fade-in-section');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -100px 0px"
+        };
 
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('is-visible');
-                appearOnScroll.unobserve(entry.target);
-            }
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
         });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
     });
     
     // Set copyright year
