@@ -199,6 +199,21 @@ a:hover {
     z-index: 1;
 }
 
+/* Highlight Text */
+.highlight-text {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.highlight-text:hover {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
 .cta-button:before {
     content: '';
     position: absolute;
